@@ -1,10 +1,13 @@
 'use strict';
-//Первое задание
+
 let weekDay = [];
+let namePerson = prompt('Как Вас зовут?'), positionPerson;
+let lang = prompt('Выберите язык - ru или en (Раскладка не имеет значения)').toLowerCase();
+
 weekDay['ru'] = ['Пн','Вт','СР','Чт','Пт','Сб','Вс'];
 weekDay['en'] = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
 
-let lang = 'ru';
+namePerson === 'Артем' ? positionPerson = 'Директор' : namePerson === 'Максим' ? positionPerson = 'Преподаватель' : positionPerson = 'Студент';
 // A
 if (lang === 'ru') console.log(weekDay['ru']);
 else if (lang === 'en') console.log(weekDay['en']);
@@ -20,6 +23,4 @@ switch (lang) {
 // C
 console.log(weekDay[lang]);
 
-// Второе задание 
-let namePerson = 'Максим';
-namePerson === 'Артем' ? console.log('Директор') : namePerson === 'Максим' ? console.log('Преподаватель') : console.log('Студент');
+console.log('Ваша должность: ', positionPerson)
