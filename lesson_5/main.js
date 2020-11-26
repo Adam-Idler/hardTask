@@ -2,12 +2,12 @@
 
 console.log('Задание 1');
 
-let arr = [123, 765, 4890, 9789, 2077, 43105, 5890];
+let arr = ['123', '765', '4890', '9789', '2077', '43105', '5890'];
 
 console.log(arr);
 
 for (let i = 0; i < arr.length; i++) {
-    if ( arr[i].toString()[0] === '2' || arr[i].toString()[0] === '4' ) console.log(arr[i]);
+    if ( arr[i][0] === '2' || arr[i].toString()[0] === '4' ) console.log(arr[i]);
 }
 
 console.log('Задание 2');
