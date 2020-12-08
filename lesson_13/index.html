@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lesson 13 hard</title>
+    <style>
+        body {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background-color: #97410f;
+        }
+        .wrapper {
+            margin: 0 auto;
+            width: 100%; 
+            text-align: center;
+        }
+        #color {
+            font-size: 30px;
+            margin: 50px 0;
+            color: white;
+        }
+        #change, #change:focus, #change:active {  
+            font-size: 16px;
+            font-weight: bold;
+            padding: 10px;
+            outline: none;
+            border: none;
+            color: #97410f;
+            background-color: azure;
+            box-shadow: 5px 5px 8px 0px rgba(13, 13, 13, 0.36);
+        }
+        #change:hover {
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <h1 id="color">#070f4e</h1>
+        <button id="change" type="button">New color</button>
+    </div>
+    <script src='script.js'></script>
+</body>
+</html>
