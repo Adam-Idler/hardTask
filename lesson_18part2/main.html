@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>18-1 Hard</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .railways {
+      position: relative;
+      overflow: hidden;
+    }
+    .railway {
+      height: 300px;
+      width: 25.4%;
+      margin: 0 -5px;
+    }
+    .train {
+      height: 20%;
+      width: 20%;
+      position: absolute;
+      top: 30%;
+      left: 0px;
+    }
+    .buttons {
+      width: 30%;
+      margin: 0 auto;
+      flex-wrap: wrap;
+      display: flex;
+      justify-content: space-between;
+    }
+    #reset {
+      width: 55%;
+      margin: 0 auto;
+    }
+    .buttons button {
+      margin: 5% 0;
+      width: 45%;
+      outline: none;
+      border: none;
+      cursor: pointer;
+      padding: 5%;
+      background: tomato;
+      color: #FFF;
+      font-size: 200%;
+      text-align: center;
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="railways">
+    <img src="img/railways.png" alt="" class="railway">
+    <img src="img/railways.png" alt=""class="railway">
+    <img src="img/railways.png" alt=""class="railway">
+    <img src="img/railways.png" alt=""class="railway">
+    <img src="img/train.png" alt="" class="train">
+  </div>
+  
+  <div class="buttons">
+    <button id="start">Запустить поезд</button>
+    <button id="stop">Остановить поезд</button>
+    <button id="reset">Перезапустить</button>
+  </div>
+  
+
+  <script src="index.js"></script>
+</body>
+</html>
