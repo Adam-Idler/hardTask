@@ -45,26 +45,23 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Menu
   class Menu {
+      
     toggleMenu() {
-      const btnMenu = document.querySelector('.menu'),
-            menu  = document.querySelector('menu'),
-            closeBtn = document.querySelector('.close-btn'),
-            menuItems = menu.querySelectorAll('ul>li');
+      const menuBtn = document.querySelector('.menu'),
+            menu  = document.querySelector('menu');
   
       const handlerMenu = function() {
         menu.classList.toggle('active-menu');
       };
   
-      menu.addEventListener('click', (event) => {
+      document.addEventListener('click', (event) => {
         let target = event.target;
-        
-        if (target.tagName === 'A') handlerMenu();
+
+        if (!target.closest('menu')) menu.classList.remove('active-menu');
+        if (target.tagName === 'A' && target.closest('.active-menu') || target.closest('.menu')) handlerMenu();
       });
-
-      btnMenu.addEventListener('click', handlerMenu);
-    }  
-  }
-
+    }
+    }
   const menu = new Menu();
   menu.toggleMenu();
 
@@ -133,10 +130,10 @@ window.addEventListener('DOMContentLoaded', () => {
   class SmoothScrolling {
       scrollTo() {
         const smoothLinks = document.querySelectorAll('a[href^="#"]');
-        for (let item of smoothLinks) {
-            item.addEventListener('click', function (event) {
+        for (let i = 0; i < 7; i++) {
+            smoothLinks[i].addEventListener('click', function (event) {
                 event.preventDefault();
-                const id = item.getAttribute('href');
+                const id = smoothLinks[i].getAttribute('href');
 
                 if (!event.target.classList.contains('close-btn')) {
                     document.querySelector(id).scrollIntoView({
